@@ -1,0 +1,11 @@
+---
+layout: default
+title: About Me
+---
+	<h1>{{ page.title }}</h1>
+	<ul class="blogs">
+
+	  {% for blog in site.blogs %}
+	    <li><span>{{ blog.date | date_to_string }}</span> » <a href="{{ blog.url }}" title="{{ blog.title }}">{{ blog.title }}</a></li>
+	  {% endfor %}
+	</ul>
